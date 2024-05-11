@@ -28,7 +28,7 @@ public class FruitController {
         return fruitService.getByPriceDesc();
     }
 
-    @GetMapping("/id")
+    @GetMapping("/{id}")
     public FruitResponse getId(@Positive @PathVariable("id") Long id){
         return new FruitResponse("get by id succed:", fruitService.getById(id));
     }
